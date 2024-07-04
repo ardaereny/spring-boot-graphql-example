@@ -1,0 +1,16 @@
+type BusinessInfo {
+    id:ID,
+    name:String,
+    address:String,
+    phone:String,
+    email:String
+}
+
+type Query {
+    getBusinessInfo:[BusinessInfo]
+    getBusinessInfoByName(name:String):[BusinessInfo]
+}
+
+type Mutation {
+    updateBusinessInfoName(id:ID,newName:String):BusinessInfo
+}
